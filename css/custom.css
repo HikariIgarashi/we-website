@@ -1,0 +1,453 @@
+/*
+ * Custom styles for Women's Eye nonprofit website
+ * This adds responsive enhancements and animations 
+ */
+
+/* Hero Image for Homepage */
+.hero-image {
+  height: 500px;
+  background-image: url('../assets/images/hero-background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  text-align: center;
+  color: white;
+  z-index: 10;
+  padding: 20px;
+  max-width: 80%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.hero-text h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.hero-text p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.hero-text .btn {
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .hero-image {
+    height: 300px;
+  }
+  
+  .hero-text h2 {
+    font-size: 24px;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+  }
+}
+
+/* General mobile responsiveness improvements */
+@media (max-width: 767px) {
+  .header .main-nav .nav .nav-item {
+    font-weight: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  
+  .header .main-nav .nav .nav-item a {
+    padding: 8px 10px;
+  }
+  
+  .promo .intro {
+    padding-top: 20px;
+  }
+  
+  .promo .btn-cta {
+    margin-top: 15px;
+  }
+  
+  .home-page .testimonials .item {
+    padding-left: 60px;
+  }
+  
+  .home-page .testimonials .item .profile .img-circle {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .home-page .testimonials .item .quote {
+    font-size: 16px;
+  }
+  
+  .donate-form .amount-buttons .btn {
+    margin-bottom: 10px;
+  }
+}
+
+/* Enhanced tablet responsiveness */
+@media (min-width: 768px) and (max-width: 991px) {
+  .header .main-nav .nav .nav-item {
+    margin-right: 10px;
+  }
+  
+  .promo .intro {
+    padding-top: 30px;
+  }
+  
+  .donate-form .amount-buttons .btn {
+    padding: 8px 15px;
+  }
+}
+
+/* Animations */
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.animate-fade-in:nth-child(1) { animation-delay: 0.1s; }
+.animate-fade-in:nth-child(2) { animation-delay: 0.2s; }
+.animate-fade-in:nth-child(3) { animation-delay: 0.3s; }
+.animate-fade-in:nth-child(4) { animation-delay: 0.4s; }
+.animate-fade-in:nth-child(5) { animation-delay: 0.5s; }
+.animate-fade-in:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom styles for the reports page */
+.thumbnail {
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  margin-bottom: 25px;
+  border: 1px solid #e9e9e9;
+}
+
+.thumbnail:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.thumbnail .caption {
+  padding: 20px;
+}
+
+.thumbnail .caption h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.thumbnail .caption .date {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.label {
+  margin-right: 5px;
+  font-weight: normal;
+  font-size: 85%;
+}
+
+/* Tag cloud styling */
+.tag-cloud {
+  line-height: 2.2;
+}
+
+.tag-cloud a {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 3px 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.tag-cloud a:hover {
+  background-color: #6091ba;
+  color: white;
+  text-decoration: none;
+}
+
+.tag-size-large {
+  font-size: 16px;
+}
+
+.tag-size-medium {
+  font-size: 14px;
+}
+
+.tag-size-small {
+  font-size: 12px;
+}
+
+/* Improved button styling */
+.btn-primary {
+  background-color: #6091ba;
+  border-color: #5084ac;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #4a7a9f;
+  border-color: #406c8d;
+}
+
+/* Pagination enhancements */
+.pagination > li > a {
+  color: #6091ba;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus {
+  background-color: #6091ba;
+  border-color: #5084ac;
+}
+
+/* Support for Japanese text display */
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  line-height: 1.7;
+}
+
+/* Donation form enhancements */
+.donate-form {
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.donate-form h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.donate-form .amount-buttons {
+  margin-bottom: 20px;
+}
+
+.donate-form .amount-buttons .btn {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  min-width: 80px;
+}
+
+.donate-form .custom-amount {
+  margin-top: 15px;
+}
+
+/* Activity timeline styling */
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  width: 2px;
+  background-color: #e9e9e9;
+}
+
+.timeline > li {
+  position: relative;
+  margin-bottom: 50px;
+  min-height: 50px;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li .timeline-panel {
+  float: right;
+  position: relative;
+  width: calc(100% - 90px);
+  padding: 20px;
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.timeline > li .timeline-panel:before {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  top: 26px;
+  left: -15px;
+  border-top: 15px solid transparent;
+  border-right: 15px solid #d4d4d4;
+  border-bottom: 15px solid transparent;
+}
+
+.timeline > li .timeline-image {
+  position: absolute;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  background-color: #6091ba;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 0 0 5px #f9f9f9;
+}
+
+.timeline > li .timeline-image h4 {
+  font-size: 14px;
+  margin-top: 30px;
+  line-height: 18px;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  right: auto;
+  left: -15px;
+  border-right-width: 15px;
+}
+
+@media (max-width: 767px) {
+  .timeline:before {
+    left: 30px;
+  }
+  
+  .timeline > li .timeline-image {
+    width: 60px;
+    height: 60px;
+    left: 0;
+    margin-left: 0;
+  }
+  
+  .timeline > li .timeline-image h4 {
+    font-size: 12px;
+    margin-top: 20px;
+    line-height: 18px;
+  }
+  
+  .timeline > li .timeline-panel {
+    width: calc(100% - 80px);
+  }
+}
+
+/* About page specific styling */
+.mission-section, .org-overview, .staff-section, .documents-section, .projects-section, .tag-section {
+  margin-bottom: 40px;
+}
+
+.mission-section .panel, .documents-section .panel {
+  border-radius: 6px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.mission-section ol {
+  padding-left: 20px;
+}
+
+.mission-section ol li {
+  margin-bottom: 15px;
+}
+
+.table-responsive {
+  border: none;
+}
+
+.table-striped>tbody>tr>th {
+  width: 30%;
+  background-color: #f9f9f9;
+}
+
+.panel-group .panel {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.panel-title a {
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+  position: relative;
+}
+
+.panel-title a:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.panel-title a.collapsed:after {
+  content: "\f105";
+}
+
+@media (max-width: 767px) {
+  .table-striped>tbody>tr>th,
+  .table-striped>tbody>tr>td {
+    display: block;
+    width: 100%;
+  }
+  
+  .table-striped>tbody>tr>th {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .table-striped>tbody>tr>td {
+    padding-top: 5px;
+  }
+  
+  .table-striped>tbody>tr {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    display: block;
+  }
+  
+  .mission-section ol {
+    padding-left: 15px;
+  }
+}
+
+/* Style tweaks for accordion on mobile */
+@media (max-width: 576px) {
+  .panel-title a {
+    font-size: 14px;
+    padding-right: 20px;
+  }
+  
+  .panel-body {
+    padding: 10px;
+  }
+  
+  .panel-body ul.list-unstyled li {
+    margin-bottom: 15px;
+  }
+} 

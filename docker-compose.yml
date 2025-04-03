@@ -1,0 +1,16 @@
+version: '3'
+services:
+  jekyll:
+    image: jekyll/jekyll:4.2.0
+    container_name: womenseye-site
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/srv/jekyll
+      - jekyll_gems:/usr/local/bundle
+    command: >
+      bash -c "bundle install &&
+               jekyll serve --watch --livereload --host 0.0.0.0"
+
+volumes:
+  jekyll_gems: 

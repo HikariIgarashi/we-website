@@ -20,11 +20,13 @@ layout: default
       </div><!--//navbar-header-->
       <div class="navbar-collapse collapse" id="navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
-          <li class="nav-item"><a class="scrollto" href="#about">About</a></li>
-          <li class="nav-item"><a class="scrollto" href="#join">Join Us</a></li>
-          <li class="nav-item"><a class="scrollto" href="#contact">Contact</a></li>
-          <li class="nav-item last"><a class="scrollto highlight" href="#donate">Donate</a></li>
+          <li class="active nav-item"><a class="scrollto" href="#promo">HOME</a></li>
+          <li class="nav-item"><a class="scrollto" href="#about">ウィメンズアイって?</a></li>
+          <li class="nav-item"><a class="scrollto" href="#activities">活動記録</a></li>
+          <li class="nav-item"><a href="/news.html">お知らせ</a></li>
+          <li class="nav-item"><a href="/reports.html">レポート</a></li>
+          <li class="nav-item"><a class="scrollto" href="#support">支援する</a></li>
+          <li class="nav-item"><a class="scrollto" href="#contact">お問い合わせ</a></li>
         </ul><!--//nav-->
       </div><!--//navabr-collapse-->
     </nav><!--//main-nav-->
@@ -33,160 +35,308 @@ layout: default
 
 <!-- ******PROMO****** -->
 <section id="promo" class="promo section offset-header">
-  <div class="container text-center">
-    <h2 class="title"><span class="highlight">{{ site.org_name }}</span></h2>
-    <p class="intro">{{ site.org_summary }}</p>
-    <div class="btns">
-      <!--a class="btn btn-cta-secondary" href="#" target="_blank">Demo</a-->
-      <a class="btn btn-outline btn-outline-medium scrollto" href="#about" target="_blank">Learn More <i class="fa fa-angle-double-down"></i></a>
+  <!-- Bootstrap Carousel -->
+  <div id="heroCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#heroCarousel" data-slide-to="1"></li>
+      <li data-target="#heroCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="slide-content">
+          <div class="slide-overlay"></div>
+          <div class="slide-image slide-image-1"></div>
+          <div class="carousel-caption">
+            <h2>私たちがめざすのは</h2>
+            <p>東北の女性たちの声を世界へ</p>
+            <a href="#about" class="btn btn-primary btn-lg">もっと知る</a>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="slide-content">
+          <div class="slide-overlay"></div>
+          <div class="slide-image slide-image-2"></div>
+          <div class="carousel-caption">
+            <h2>グラスルーツ・アカデミー</h2>
+            <p>ローカルで活躍する女性たちのネットワーク</p>
+            <a href="#activities" class="btn btn-primary btn-lg">活動を見る</a>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="slide-content">
+          <div class="slide-overlay"></div>
+          <div class="slide-image slide-image-3"></div>
+          <div class="carousel-caption">
+            <h2>女性のエンパワーメント</h2>
+            <p>スキルアップとキャリア支援を通じて</p>
+            <a href="/about.html" class="btn btn-primary btn-lg">詳しくはこちら</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <ul class="meta list-inline">
-      <li></li>
-    </ul><!--//meta-->
-  </div><!--//container-->
-  <div class="social-media">
-    <div class="info text-center">
-      <ul class="social-icons list-inline">
-        {% if site.twitter_username %}
-        <li><a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        {% endif %}
-        {% if site.facebook_username %}
-        <li><a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
-        {% endif %}
-        {% if site.instagram_username %}
-        <li><a href="http://instagram.com/{{ site.instagram_username }}"><i class="fa fa-instagram"></i></a></li>
-        {% endif %}
-        {% if site.org_general_email_inbox %}
-        <li class="last"><a href="mailto: {{ site.org_general_email_inbox }}"><i class="fa fa-envelope"></i></a></li>
-        {% endif %}
-      </ul>
-    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#heroCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#heroCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 </section><!--//promo-->
 
 <!-- ******ABOUT****** -->
 <section id="about" class="about section">
   <div class="container">
-    <h2 class="title text-center">About Us</h2>
+    <h2 class="title text-center">ウィメンズアイって?</h2>
     <p class="intro text-center">{{ site.org_full_description }}</p>
-  </div><!--//container-->
-</section><!--//about-->
-
-<!-- ******JOIN****** -->
-<section id="join" class="join section">
-  <div class="container text-center">
-    <h2 class="title">Join Us</h2>
     <div class="row">
-      <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
-        <h1 class="join-us-intro">We Need Your Voice.<br> Join Us!</h1>
-      </div>
-      <div class="col-sm-5 text-left text-left-sm">
-        <p>Sign up to receive updates, progress reports and ways to get involved. We're excited to have you join our amazing community!</p>
-        {% if site.tinyletter_username %}
-        <p><em>No spam. Just the occasional update.</em></p>
-        <div class="row">
-          <div class="col-sm-12">
-            <form class="form-inline" role="form" action="https://tinyletter.com/{{ site.tinyletter_username }}" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/{{ site.tinyletter_username }}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-              <div class="input-group input-group-lg col-sm-12">
-                <label class="sr-only" for="tlemail">Email address</label>
-                <input type="email" class="form-control" name="email" id="tlemail" placeholder="email address" />
-                <div class="input-group-btn">
-                  <button type="submit" class="button btn btn-cta-secondary">Join Us!</button>
-                </div><!-- /btn-group -->
-              </div><!-- /input-group -->
-            </form>
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p class="text-center">
+              NPO法人ウィメンズアイは、ローカルで活躍する女性たちが学び合い、つながりを深める場として「グラスルーツ・アカデミー」を開催しています。また、地域女性のスキルアップやデジタル研修、キャリア支援など、様々なプログラムを通じて東北の女性たちをエンパワーメントしています。
+            </p>
+            <p class="text-center">
+              <a href="/about.html" class="btn btn-primary">詳しくはこちら <i class="fa fa-angle-right"></i></a>
+            </p>
           </div>
         </div>
-        {% elsif site.mailchimp_embed_code %}
-        <p><em>No spam. Just the occasional update.</em></p>
-        <div id="mc_embed_signup">
-          <form action="{{ site.mailchimp_embed_code }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate bs-component" target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-              <div class="form-group">
-                <label for="mce-EMAIL" class="sr-only">Email Address</label>
-                <input placeholder="email address" type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <label for="mce-FNAME" class="sr-only">Given / First Name </label>
-                    <input placeholder="given / first name" type="text" value="" name="FNAME" class="form-control" id="mce-FNAME">
-                  </div>
-                  <div class="col-xs-6">
-                    <label for="mce-LNAME" class="sr-only">Family / Last Name </label>
-                    <input placeholder="family / last name" type="text" value="" name="LNAME" class="form-control" id="mce-LNAME">
-                  </div>
-                </div>
-              </div>
-              <div id="mce-responses" class="clear">
-                <div class="response" id="mce-error-response" style="display:none"></div>
-                <div class="response" id="mce-success-response" style="display:none"></div>
-              </div>
-              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;"><input type="text" name="{{ site.mailchimp_spam_guard }}" tabindex="-1" value=""></div>
-              <div class="clear">
-
-                <input type="submit" value="Join Us!" name="subscribe" id="mc-embedded-subscribe" class="button btn-success btn-block btn" />
-              </div>
-            </div>
-          </form>
-        </div>
-        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-        <!--End mc_embed_signup-->
-        {% else %}
-        <p><em>Sorry, email signup is not available at this time <i class="fa fa-frown-o"></i></em></p>
-        {% endif %}
-
-        <!--form style="padding:3px;text-align:center;" action="https://tinyletter.com/{{ site.tinyletter_username }}" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/{{ site.tinyletter_username }}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><label for="tlemail">Subscribe to Updates</label></p><p><input type="text" style="width:140px" name="email" id="tlemail" data-behavior="placeholder" placeholder="Email Address" /></p><input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" /><p></p></form-->
-
-
       </div>
     </div>
   </div><!--//container-->
-</section><!--//join-->
+</section><!--//about-->
 
-<!-- ******DONATE****** -->
-<section id="donate" class="donate section text-center">
+<!-- ******PROJECTS (FORMERLY ACTIVITIES)****** -->
+<section id="activities" class="section">
+  <div class="container">
+    <h2 class="title text-center">プロジェクト</h2>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="project-card animate-slide-up">
+          <div class="img-container">
+            <img src="assets/images/grassroots-academy-tohoku.jpg" alt="グラスルーツ・アカデミー東北">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">グラスルーツ・アカデミー東北</h3>
+            <p><a href="#" class="btn btn-primary" role="button">詳細を見る</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="project-card animate-slide-up">
+          <div class="img-container">
+            <img src="assets/images/pan-oui.jpg" alt="パン・菓子工房oui">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">パン・菓子工房oui</h3>
+            <p><a href="#" class="btn btn-primary" role="button">詳細を見る</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="project-card animate-slide-up">
+          <div class="img-container">
+            <img src="assets/images/comado.jpg" alt="comado">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">comado</h3>
+            <p><a href="#" class="btn btn-primary" role="button">詳細を見る</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="project-card animate-slide-up">
+          <div class="img-container">
+            <img src="assets/images/umisato-kosha.jpg" alt="うみさと工舎Webshop">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">うみさと工舎Webshop</h3>
+            <p><a href="#" class="btn btn-primary" role="button">詳細を見る</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--//container-->
+</section><!--//activities-->
+
+<!-- ******NEWS****** -->
+<section id="news" class="section">
+  <div class="container">
+    <h2 class="title text-center">お知らせ</h2>
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="thumbnail animate-fade-in">
+          <div class="img-wrapper">
+            <img src="assets/images/grassroots-academy.jpg" alt="グラスルーツ・アカデミー">
+          </div>
+          <div class="caption">
+            <span class="label label-primary">エンパワーメント</span>
+            <span class="label label-success">グラスルーツ・アカデミー東北</span>
+            <span class="label label-info">スキルアップ</span>
+            <h3>グラスルーツ・アカデミー in 奈良「うちとそとを繋ぐコミュニケーション 〜若者世代と描く公正な地域づくり〜」</h3>
+            <p class="date">投稿日：2025年3月7日</p>
+            <p>NPO法人ウィメンズアイは、ローカルで活躍する女性たちが学び合い、つながりを深める場として「グラスルーツ・アカデミー」を開催しています。</p>
+            <p><a href="/news.html" class="btn btn-primary" role="button">もっと見る</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="thumbnail animate-fade-in">
+          <div class="img-wrapper">
+            <img src="assets/images/we-mail.jpg" alt="WEメルマ">
+          </div>
+          <div class="caption">
+            <span class="label label-warning">WEメルマ！</span>
+            <h3>2024年11月-2025年1月《WEメルマ！》第74号</h3>
+            <p class="date">投稿日：2025年1月31日</p>
+            <p>明けましておめでとうございます。お正月が明け、宮城県地方には【どんと祭】というお祭りがあります。1月14日に神社の境内で正月飾りを焼き、御神火にあたることで一年の無病息災や家内安全を祈願するものです。平穏な一年になります...</p>
+            <p><a href="/news.html" class="btn btn-primary" role="button">もっと見る</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-md-offset-0 col-sm-offset-3">
+        <div class="thumbnail animate-fade-in">
+          <div class="img-wrapper">
+            <img src="assets/images/digital-training.jpg" alt="デジタル研修">
+          </div>
+          <div class="caption">
+            <span class="label label-primary">エンパワーメント</span>
+            <span class="label label-info">スキルアップ</span>
+            <span class="label label-danger">デジタル研修</span>
+            <h3>プレスリリース配信しました</h3>
+            <p class="date">投稿日：2025年1月19日</p>
+            <p>地方の⼥性がPCスキル研修を受けるための意外と知られていないハードルは、「パソコン貸出」 ウィメンズアイでは、2023年8月に「気仙沼市で暮らす女性の仕事・デジタル・生活に関する調査」を実施し、調査結果から、地域女性のス...</p>
+            <p><a href="/news.html" class="btn btn-primary" role="button">もっと見る</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <a href="/news.html" class="btn btn-outline">すべてのお知らせを見る <i class="fa fa-arrow-right"></i></a>
+    </div>
+  </div><!--//container-->
+</section><!--//news-->
+
+<!-- ******REPORTS****** -->
+<section id="reports" class="section">
+  <div class="container">
+    <h2 class="title text-center">レポート</h2>
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="thumbnail animate-fade-in">
+          <div class="img-wrapper">
+            <img src="assets/images/womans-college.jpg" alt="ウーマンズ・カレッジ">
+          </div>
+          <div class="caption">
+            <span class="label label-primary">エンパワーメント</span>
+            <span class="label label-info">スキルアップ</span>
+            <span class="label label-warning">講演・セミナー</span>
+            <h3>気仙沼市女性人材育成事業「アクティブ・ウーマンズ・カレッジ第8期」</h3>
+            <p class="date">投稿日：2025年3月3日</p>
+            <p>ウィメンズアイは2024年度、気仙沼市の委託を受けチャレンジしたい女性の一歩を応援する連続講座「アクティブ・ウーマンズ・カレッジ」の第8期を企画・運営しました。</p>
+            <p><a href="/reports.html" class="btn btn-primary" role="button">もっと見る</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="thumbnail animate-fade-in">
+          <div class="img-wrapper">
+            <img src="assets/images/text-communication.jpg" alt="テキストコミュニケーション講座">
+          </div>
+          <div class="caption">
+            <span class="label label-primary">エンパワーメント</span>
+            <span class="label label-info">スキルアップ</span>
+            <span class="label label-danger">デジタル研修</span>
+            <h3>デジタルカレッジUP 第2期 第2回対面講座「テキストコミュニケーション」のご報告</h3>
+            <p class="date">投稿日：2025年2月14日</p>
+            <p>デジタルカレッジUP第2期は、就職や転職に向けたスキルアップや、キャリアアップを目指す女性の学びの場として12月15日より開講しました。 今回は、年が明けた1月25日に開催した対面講座第2回の様子をご報告します。</p>
+            <p><a href="/reports.html" class="btn btn-primary" role="button">もっと見る</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-md-offset-0 col-sm-offset-3">
+        <div class="thumbnail animate-fade-in">
+          <div class="img-wrapper">
+            <img src="assets/images/digital-survey.jpg" alt="デジタル調査">
+          </div>
+          <div class="caption">
+            <span class="label label-primary">調査レポート</span>
+            <span class="label label-danger">デジタル研修</span>
+            <h3>気仙沼市で暮らす女性の仕事・デジタル・生活に関する調査</h3>
+            <p class="date">投稿日：2024年8月16日</p>
+            <p>気仙沼市にお住まいの女性を対象に、働き方やデジタルスキル、生活環境に関するアンケート調査を実施しました。この調査結果から、地域女性が抱える課題や必要とされる支援について分析しています。</p>
+            <p><a href="/reports.html" class="btn btn-primary" role="button">もっと見る</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <a href="/reports.html" class="btn btn-outline">すべてのレポートを見る <i class="fa fa-arrow-right"></i></a>
+    </div>
+  </div><!--//container-->
+</section><!--//reports-->
+
+<!-- ******SUPPORT****** -->
+<section id="support" class="donate section">
   <div class="container">
     <div class="donate-inner">
-      <h2 class="title text-center">Donate</h2>
-      <div class="info">
-        <p><strong>Become a donor today.</strong><br>As a small grassroots organization, know that every dollar will have an immense impact on our ability to continue working towards our mission.</p>
-        {% if site.donorbox_campaign_name %}
-          <div class="donorbox text-center">
-            <iframe src="https://donorbox.org/embed/{{ site.donorbox_campaign_name }}" height="600px" width="100%" style="max-width:500px; min-width:310px" seamless="seamless" name="donorbox" frameborder="0" scrolling="no"></iframe>
+      <h2 class="title text-center">支援する</h2>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+          <div class="info text-center">
+            <p><strong>私たちの活動をサポートしてください</strong><br>皆様からのご支援は、東北の女性たちのエンパワーメントと地域の復興に直接つながります。</p>
+          </div><!--//info-->
+          
+          {% if site.donorbox_campaign_name %}
+            <div class="donorbox text-center">
+              <iframe src="https://donorbox.org/embed/{{ site.donorbox_campaign_name }}" height="600px" width="100%" style="max-width:500px; min-width:310px" seamless="seamless" name="donorbox" frameborder="0" scrolling="no"></iframe>
+            </div>
+            {% if site.is_501c3 == true %}
+              <p class="text-center">ご寄付は税控除の対象となります。<br>{{ site.org_name }}は認定NPO法人です。</p>
+            {% elsif site.fiscal_sponsor_name %}
+              <p class="text-center">{{ site.org_name }}は{{ site.fiscal_sponsor_name }}によって財政支援を受けています。</p>
+            {% endif %}
+          {% else %}
+          <div class="donate-form">
+            <h3 class="text-center">寄付を選択</h3>
+            <div class="amount-buttons text-center">
+              <button class="btn btn-primary">¥1,000</button>
+              <button class="btn btn-primary">¥3,000</button>
+              <button class="btn btn-primary">¥5,000</button>
+              <button class="btn btn-primary">¥10,000</button>
+            </div>
+            <div class="custom-amount">
+              <div class="form-group">
+                <label for="custom-amount">その他の金額</label>
+                <div class="input-group">
+                  <span class="input-group-addon">¥</span>
+                  <input type="number" class="form-control" id="custom-amount" placeholder="金額を入力">
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button class="btn btn-lg btn-primary">寄付する</button>
+            </div>
           </div>
-          {% if site.is_501c3 == true %}
-            <p>Contributions are tax deductible to the extent permitted by law.<br>{{ site.org_name }} is a 501(c)(3) organization.</p>
-          {% elsif site.fiscal_sponsor_name %}
-            <p>{{ site.org_name }} is fiscally sponsored by {{ site.fiscal_sponsor_name }}, a 501 (c)(3) tax exempt non-profit organization.</p>
           {% endif %}
-        {% else %}
-        <div class="donorbox text-center">
+          
+          <div class="cta-container">
+            <div class="speech-bubble">
+              <p class="intro">皆様のご支援に心より感謝申し上げます :)</p>
+              <div class="icon-holder text-center"><i class="fa fa-smile-o"></i></div>
+            </div><!--//speech-bubble-->
+          </div><!--//cta-container-->
         </div>
-        <hr>
-        <p class="text-warning">Sorry, online donations are not available at this time <i class="fa fa-frown-o"></i></p>
-        <hr>
-        {% endif %}
-      </div><!--//info-->
-      <div class="cta-container">
-        <div class="speech-bubble">
-          <p class="intro">Your support means the world to us :)</p>
-          <div class="icon-holder  text-center"><i class="fa fa-smile-o"></i></div>
-        </div><!--//speech-bubble-->
-        <div class="btn-container  text-center">
-          <!--//You need to generate your own PayPal button if you choose to use Paypal - https://www.paypal.com/us/cgi-bin/?cmd=_donate-intro-outside -->
-          <!--PayPal generated code starts-->
-              <!--form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_s-xclick">
-              <input type="hidden" name="hosted_button_id" value="{{ site.paypal_button_id }}">
-              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-              <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-            </form-->
-            <!--//PayPal generated code ends-->
-
-        </div><!--//btn-container-->
-      </div><!--//cta-container-->
+      </div>
     </div><!--//donate-inner-->
   </div><!--//container-->
 </section><!--//how-->
@@ -195,33 +345,62 @@ layout: default
 <section id="contact" class="contact section has-pattern">
   <div class="container">
     <div class="contact-inner">
-      <h2 class="title  text-center">Contact</h2>
-      <address class="text-center">
-        <strong>{{ site.org_name }}</strong><br>
-        {% if site.org_street_address %}{{ site.org_street_address }},&nbsp;{% endif %}{% if site.org_address_suite %}{{ site.org_address_suite }}<br>{% endif %}
-        {% if site.org_city %}{{ site.org_city }},&nbsp;{% endif %}{% if site.org_state %}{{ site.org_state }}&nbsp;{% endif %}{% if site.org_zip %}{{ site.org_zip }}{% endif %}<br>
-        {% if site.org_phone %}
-        <abbr title="Phone">P:</abbr> {{ site.org_phone }}
-        {% endif %}
-      </address>
-      <div class="clearfix"></div>
-      <div class="info text-center">
-        <h4 class="sub-title">Get Connected</h4>
-        <ul class="social-icons list-inline">
-        {% if site.twitter_username %}
-        <li><a href="https://twitter.com/{{ site.org_twitter_username }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        {% endif %}
-        {% if site.facebook_username %}
-        <li><a href="https://www.facebook.com/{{ site.org_facebook_username }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
-        {% endif %}
-        {% if site.instagram_username %}
-        <li><a href="http://instagram.com/{{ site.org_instagram_username }}"><i class="fa fa-instagram"></i></a></li>
-        {% endif %}
-        {% if site.org_general_email_inbox %}
-        <li class="last"><a href="mailto: {{ site.org_general_email_inbox }}"><i class="fa fa-envelope"></i></a></li>
-        {% endif %}
-      </ul>
-      </div><!--//info-->
+      <h2 class="title text-center">お問い合わせ</h2>
+      <div class="row">
+        <div class="col-md-5 col-sm-12">
+          <div class="info">
+            <h4 class="sub-title">ソーシャルメディアでつながる</h4>
+            <ul class="social-icons list-inline">
+            {% if site.twitter_username %}
+            <li><a href="https://twitter.com/{{ site.org_twitter_username }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            {% endif %}
+            {% if site.facebook_username %}
+            <li><a href="https://www.facebook.com/{{ site.org_facebook_username }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            {% endif %}
+            {% if site.instagram_username %}
+            <li><a href="http://instagram.com/{{ site.org_instagram_username }}"><i class="fa fa-instagram"></i></a></li>
+            {% endif %}
+            </ul>
+            
+            <h4 class="sub-title">お問い合わせ先</h4>
+            <p><i class="fa fa-envelope"></i> <a href="mailto:{{ site.org_general_email_inbox }}">{{ site.org_general_email_inbox }}</a></p>
+            
+            <h4 class="sub-title">所在地</h4>
+            <p><i class="fa fa-map-marker"></i> 宮城県気仙沼市<br>〒988-0000</p>
+            
+            <h4 class="sub-title">お問い合わせ時間</h4>
+            <p><i class="fa fa-clock-o"></i> 平日 9:00〜18:00</p>
+          </div><!--//info-->
+        </div>
+        
+        <div class="col-md-7 col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <form class="form">
+                <div class="form-group">
+                  <label for="name">お名前</label>
+                  <input type="text" class="form-control" id="name" placeholder="お名前" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">メールアドレス</label>
+                  <input type="email" class="form-control" id="email" placeholder="メールアドレス" required>
+                </div>
+                <div class="form-group">
+                  <label for="subject">件名</label>
+                  <input type="text" class="form-control" id="subject" placeholder="件名">
+                </div>
+                <div class="form-group">
+                  <label for="message">メッセージ</label>
+                  <textarea class="form-control" id="message" rows="5" placeholder="メッセージを入力してください" required></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary btn-lg">送信</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div><!--//contact-inner-->
   </div><!--//container-->
 </section><!--//contact-->

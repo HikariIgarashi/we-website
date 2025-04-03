@@ -1,3 +1,70 @@
+# Women's Eye モダン ウェブサイト
+
+このリポジトリには、NPO法人ウィメンズアイのためにモダンなウェブサイトをリニューアルしたコードが含まれています。
+
+## 概要
+
+Women's Eyeは、東北の復興を担う女性たちを応援する団体です。このウェブサイトは、彼らの活動や使命を効果的に伝えるために現代的なデザインで作られています。
+
+## 特徴
+
+- モバイル対応のレスポンシブデザイン
+- モダンなカードUIとアニメーション効果
+- 使いやすいナビゲーション
+- 美しいタイポグラフィとカラースキーム
+- ソーシャルメディア連携
+
+## 技術スタック
+
+- HTML5/CSS3
+- Bootstrap 3
+- jQuery
+- Jekyll（静的サイトジェネレーター）
+- Font Awesome（アイコン）
+- Animate.css（アニメーション）
+
+## セクション
+
+1. **ホーム**: ウェブサイトのメインランディングページ
+2. **ウィメンズアイって?**: 団体の紹介と使命
+3. **活動記録**: 団体の活動カテゴリー
+4. **お知らせ**: 最新ニュースや告知
+5. **レポート**: 活動報告やブログ記事
+6. **プロジェクト**: 主要プロジェクトの紹介
+7. **支援する**: 寄付と支援の案内
+8. **お問い合わせ**: 連絡フォームとコンタクト情報
+
+## 実行方法
+
+### オプション1: Jekyllを使用する
+
+このサイトはJekyllで構築されています。ローカルでサイトを実行するには：
+
+1. Jekyllがインストールされていることを確認：`gem install jekyll bundler`
+2. プロジェクトディレクトリで依存関係をインストール：`bundle install`
+3. ローカルサーバーを起動：`bundle exec jekyll serve`
+4. ブラウザで `http://localhost:4000` にアクセス
+
+### オプション2: Dockerを使用する
+
+環境設定の問題を避けるために、Dockerを使用してサイトを実行することもできます：
+
+1. Dockerとdocker-composeがインストールされていることを確認
+2. プロジェクトディレクトリで以下のコマンドを実行：`docker-compose up`
+3. ブラウザで `http://localhost:4000` にアクセス
+
+## カスタマイズ
+
+サイトの主な設定は `_config.yml` ファイルで管理されています。サイトのタイトル、説明、連絡先情報などをこのファイルで変更できます。
+
+デザインのカスタマイズは、以下のファイルで行えます：
+- `assets/css/main.scss`: メインスタイルシート
+- `assets/css/custom.css`: カスタムスタイルシート
+
+## クレジット
+
+この新しいデザインは、オリジナルのWomen's Eyeウェブサイト（https://womenseye.net/）の内容と、SmarterGivingによる無料の非営利団体スターターテンプレートを元に作成されました。
+
 ## A Free Website Template for Nonprofits
 We want to help introduce the nonprofit community to the powerful world of open source development. Just follow the step-by-step instructions below, and in less than an hour your grassroots nonprofit will have a live, no-cost website complete with online donation capabilities.
 

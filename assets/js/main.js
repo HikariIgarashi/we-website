@@ -19,15 +19,23 @@ jQuery(document).ready(function($) {
 
         //store hash
         var target = this.hash;
+        if (!target) return;
 
         e.preventDefault();
 
-    $('body').scrollTo(target, 800, {offset: -70, 'axis':'y'});
+        $('body').scrollTo(target, 800, {offset: -70, 'axis':'y'});
         //Collapse mobile menu after clicking
-    if ($('.navbar-collapse').hasClass('in')){
-      $('.navbar-collapse').removeClass('in').addClass('collapse');
-    }
+        if ($('.navbar-collapse').hasClass('in')){
+          $('.navbar-collapse').removeClass('in').addClass('collapse');
+        }
 
-  });
+    });
+    
+    // Force sections to be visible
+    $('#activities, #news, #reports').css({
+        'display': 'block', 
+        'visibility': 'visible', 
+        'opacity': 1
+    });
 
 });
